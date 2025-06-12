@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+   body {
+      font-family: Arial, sans-serif;
+      background: #40276d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 25px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .form-group input[type="radio"] {
+      width: auto;
+    }
+
+    .form-group .gender-options {
+      display: flex;
+      gap: 10px;
+    }
+
+    .form-group.checkbox {
+      display: flex;
+      align-items: left;
+    }
+
+    .form-group.checkbox label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .form-group .checkbox input {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background-color: #25105c;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #4e2188;
+    }
+    </style>
+    
+    <title>Document</title>
+    
+</head>
+<body>
+     <div class="form-container">
+    <h2>Register</h2>
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="gender-options">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="course">Course/Program</label>
+        <select id="course" required>
+          <option value="">Select Course</option>
+          <option value="Computer Science">Medical Technology</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Business Administration">Nursing</option>
+          <option value="Engineering">Accountant</option>
+        </select>
+      </div>
+
+    <div class="form-group checkbox">
+    <label for="terms">
+    <input type="checkbox" id="terms" required>
+        Terms and Conditions
+    </label>
+    </div>
+
+    
+      
+
+      
+      
+      <button type="button" class="submit-btn" onclick="MyFunction()">Register</button>
+
+      <h6 style="text-align: center;">
+  <h6 style="text-align: center;">
+  <a href="index.html"
+     style="display: inline-block; padding: 10px 20px; background-color: #3498db; color: white;
+            text-decoration: none; border-radius: 5px; font-size: 14px; font-family: sans-serif;
+            transition: background-color 0.3s;"
+     onmouseover="this.style.backgroundColor='#2980b9'"
+     onmouseout="this.style.backgroundColor='#3498db'">
+    Back to Portfolio
+  </a>
+</h6>
+</h6>
+
+      <script>
+      function MyFunction() {
+        const fullName = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const dob = document.getElementById("dob").value;
+        const course = document.getElementById("course").value;
+        const terms = document.getElementById("terms").checked;
+
+        if (fullName && email && password && phone && gender && dob && course && terms) {
+            alert("Registration Successfully");
+        } else {
+            alert("Please fill out all fields correctly.");
+    }
+    
+}
+</script>
+    </form>
+  </div>
+
+  
+</body>
+</html>

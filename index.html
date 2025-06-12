@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noel Mateo - Portfolio</title>
+
+    <style>
+
+    
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.site-header {
+    background: linear-gradient(to bottom right, #b71c1c, #880e4f);
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.about-me, .platforms {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.platform-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.platform-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%;
+}
+
+.platform-card img {
+    border-radius: 4px;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 1rem;
+    background: #eee;
+}
+
+.programming-languages {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.language-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.language-card {
+    width: 120px;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.language-card:hover {
+    transform: translateY(-5px);
+}
+
+.language-card img {
+    display: block;
+    margin: 0 auto 0.5rem;
+}
+
+.site-footer {
+    background: linear-gradient(to right, #900, #c00); /* Red gradient */
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.site-footer hr {
+    border: none;
+    height: 2px;
+    width: 80%;
+    margin: 0 auto 1rem;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.site-footer p {
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.site-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-text {
+    flex: 1;
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-text {
+        padding: 0 1rem;
+    }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(to bottom right, #b71c1c, #880e4f);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    height: 2rem;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+}
+
+.platform-card {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.platform-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+</head>
+
+
+<body>
+
+    <section class="hero">
+    <h1>Noel Mateo</h1>
+    <h2 id="typed-text"></h2>
+</section>
+
+    <main>
+
+      <section class="parallax-section">
+    <div class="about-me">
+        <div class="about-content">
+            
+            <div class="profile-text">
+                <h2>About Me</h2>
+                 <p>Hello! I'm currently a Bachelor of Science in Information Technology – Mobile and Web Applications student at <strong>National University - MOA</strong>.</p>
+    
+    <p>I live in <strong>San Pedro, Laguna</strong>, and my educational journey started at <strong>Southern Heights Montessori</strong> during my elementary years. I graduated from <strong>Our Lady of Fatima - Laguna</strong> for high school.</p>
+    
+    <p>As a tech enthusiast, I'm still exploring the different fields within IT. Whether it's development, cybersecurity, design, or data — I'm open to discovering where I truly belong in this ever-evolving industry.</p>
+
+    <p>Outside of school, I enjoy learning new tools and technologies and building small projects to strengthen my skills.</p>
+
+    <p style="margin-top: 20px;"><em>“Still figuring things out, one line of code at a time.”</em></p>
+            </div>
+
+            
+        </div>
+
+        
+    </div>
+
+    
+</section>
+
+        <section class="programming-languages">
+    <h2>Programming Languages</h2>
+    <div class="language-grid">
+        <div class="language-card">
+            <img src="h.png" alt="HTML" width="60">
+            <p>HTML</p>
+        </div>
+        <div class="language-card">
+            <img src="c.png" alt="CSS" width="60">
+            <p>CSS</p>
+        </div>
+        <div class="language-card">
+            <img src="ja.png" alt="JavaScript" width="60">
+            <p>JavaScript</p>
+        </div>
+        <div class="language-card">
+            <img src="jv.png" alt="java" width="60">
+            <p>Java</p>
+        </div>
+        <div class="language-card">
+            <img src="py.png" alt="Python" width="60">
+            <p>Python</p>
+        </div>
+    </div>
+</section>
+
+       <section class="platforms">
+        <br>
+    <h2>Projects</h2>
+    <div class="platform-grid">
+
+        <a href="first.html" class="platform-card">
+            <h3>First Activity</h3>
+            <!--<img src="p.jpg" alt="Pera O Bayong" width="100" height="100">-->
+        </a>
+
+        <a href="MATEOArnis.html" class="platform-card">
+            <h3>National Sports w/ CSS</h3>
+            <!--<img src="OIP (1).jpg" alt="Giling-Giling" width="100" height="100">-->
+        </a>
+
+        <a href="index1.html" class="platform-card">
+            <h3>Registration Form</h3>
+            <!--<img src="ss.jpg" alt="HepHep Hooray" width="100" height="100">-->
+        </a>
+
+    </div>
+</section>
+
+    </main>
+
+    <footer class="site-footer">
+       <div class="social-links">
+    <a href="#"><img src="fbs.png" alt="facebook" width="24"></a>
+    <a href="#"><img src="x.png" alt="Twitter" width="24"></a>
+</div>
+    </footer>
+
+    <script>
+    const text = [
+      "IT Student.",
+      "NU-MOA.",
+      "OWEL."
+    ];
+
+    let line = 0;
+    let char = 0;
+    const speed = 100;
+    const eraseSpeed = 50;
+    const pause = 1000;
+
+    const typedText = document.getElementById("typed-text");
+
+    function typeLine() {
+      if (char < text[line].length) {
+        typedText.textContent += text[line].charAt(char);
+        char++;
+        setTimeout(typeLine, speed);
+      } else {
+        setTimeout(eraseLine, pause);
+      }
+    }
+
+    function eraseLine() {
+      if (char > 0) {
+        typedText.textContent = text[line].substring(0, char - 1);
+        char--;
+        setTimeout(eraseLine, eraseSpeed);
+      } else {
+        line = (line + 1) % text.length;
+        setTimeout(typeLine, speed);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      typeLine();
+    });
+  </script>
+
+  <!-- Section Fade-in Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("fade-in");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    });
+  </script>
+
+</body>
+</html>
