@@ -8,14 +8,45 @@
     <style>
 
     
-    body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
-}
+   body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar Styles */
+    nav {
+      background: linear-gradient(to right, #b71c1c, #880e4f);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      padding: 1rem 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
 
 .site-header {
     background: linear-gradient(to bottom right, #b71c1c, #880e4f);
@@ -217,96 +248,68 @@ section.fade-in {
 
 <body>
 
+
     <section class="hero">
     <h1>Noel Mateo</h1>
     <h2 id="typed-text"></h2>
 </section>
 
+<nav>
+  <ul>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#languages">Programming Languages</a></li>
+    <li><a href="#projects">Projects</a></li>
+  </ul>
+</nav>
+
     <main>
-
-      <section class="parallax-section">
-    <div class="about-me">
-        <div class="about-content">
-            
-            <div class="profile-text">
-                <h2>About Me</h2>
-                 <p>Hello! I'm currently a Bachelor of Science in Information Technology – Mobile and Web Applications student at <strong>National University - MOA</strong>.</p>
-    
-    <p>I live in <strong>San Pedro, Laguna</strong>, and my educational journey started at <strong>Southern Heights Montessori</strong> during my elementary years. I graduated from <strong>Our Lady of Fatima - Laguna</strong> for high school.</p>
-    
-    <p>As a tech enthusiast, I'm still exploring the different fields within IT. Whether it's development, cybersecurity, design, or data — I'm open to discovering where I truly belong in this ever-evolving industry.</p>
-
-    <p>Outside of school, I enjoy learning new tools and technologies and building small projects to strengthen my skills.</p>
-
-    <p style="margin-top: 20px;"><em>“Still figuring things out, one line of code at a time.”</em></p>
-            </div>
-
-            
-        </div>
-
-        
+  
+  <section id="about" class="about-me" style="padding: 40px; background-color: #f9f9f9;">
+    <div class="about-container" style="display: flex; flex-wrap: wrap; align-items: center; max-width: 900px; margin: auto;">
+      <div class="profile-image" style="flex: 1 1 200px; text-align: center; margin-bottom: 20px;">
+        <img src="pro.jpg" alt="My Profile Photo" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid #ccc;">
+      </div>
+      <div class="profile-text" style="flex: 2 1 400px; padding: 20px;">
+        <h2>About Me</h2>
+        <p>Hello! I'm currently a Bachelor of Science in Information Technology – Mobile and Web Applications student at <strong>National University - MOA</strong>.</p>
+        <p>I live in <strong>San Pedro, Laguna</strong>, and my educational journey started at <strong>Southern Heights Montessori</strong> during my elementary years. I graduated from <strong>Our Lady of Fatima - Laguna</strong> for high school.</p>
+        <p>As a tech enthusiast, I'm still exploring the different fields within IT. Whether it's development, cybersecurity, design, or data — I'm open to discovering where I truly belong in this ever-evolving industry.</p>
+        <p>Outside of school, I enjoy learning new tools and technologies and building small projects to strengthen my skills.</p>
+        <p style="margin-top: 20px;"><em>“Still figuring things out, one line of code at a time.”</em></p>
+      </div>
     </div>
+  </section>
 
-    
-</section>
-
-        <section class="programming-languages">
+  
+  <section id="languages" class="programming-languages">
     <h2>Programming Languages</h2>
     <div class="language-grid">
-        <div class="language-card">
-            <img src="h.png" alt="HTML" width="60">
-            <p>HTML</p>
-        </div>
-        <div class="language-card">
-            <img src="c.png" alt="CSS" width="60">
-            <p>CSS</p>
-        </div>
-        <div class="language-card">
-            <img src="ja.png" alt="JavaScript" width="60">
-            <p>JavaScript</p>
-        </div>
-        <div class="language-card">
-            <img src="jv.png" alt="java" width="60">
-            <p>Java</p>
-        </div>
-        <div class="language-card">
-            <img src="py.png" alt="Python" width="60">
-            <p>Python</p>
-        </div>
+      <div class="language-card"><img src="h.png" alt="HTML" width="60"><p>HTML</p></div>
+      <div class="language-card"><img src="c.png" alt="CSS" width="60"><p>CSS</p></div>
+      <div class="language-card"><img src="ja.png" alt="JavaScript" width="60"><p>JavaScript</p></div>
+      <div class="language-card"><img src="jv.png" alt="Java" width="60"><p>Java</p></div>
+      <div class="language-card"><img src="py.png" alt="Python" width="60"><p>Python</p></div>
     </div>
-</section>
+  </section>
 
-       <section class="platforms">
-        <br>
+  
+  <section id="projects" class="platforms">
     <h2>Projects</h2>
     <div class="platform-grid">
-
-        <a href="first.html" class="platform-card">
-            <h3>First Activity</h3>
-            <!--<img src="p.jpg" alt="Pera O Bayong" width="100" height="100">-->
-        </a>
-
-        <a href="MATEOArnis.html" class="platform-card">
-            <h3>National Sports w/ CSS</h3>
-            <!--<img src="OIP (1).jpg" alt="Giling-Giling" width="100" height="100">-->
-        </a>
-
-        <a href="index1.html" class="platform-card">
-            <h3>Registration Form</h3>
-            <!--<img src="ss.jpg" alt="HepHep Hooray" width="100" height="100">-->
-        </a>
-
+      <a href="first.html" class="platform-card"><h3>First Activity</h3></a>
+      <a href="MATEOArnis.html" class="platform-card"><h3>National Sports w/ CSS</h3></a>
+      <a href="index1.html" class="platform-card"><h3>Registration Form</h3></a>
     </div>
-</section>
+  </section>
+</main>
 
-    </main>
 
-    <footer class="site-footer">
-       <div class="social-links">
-    <a href="#"><img src="fbs.png" alt="facebook" width="24"></a>
+<footer class="site-footer">
+  <div class="social-links">
+    <a href="#"><img src="fbs.png" alt="Facebook" width="24"></a>
     <a href="#"><img src="x.png" alt="Twitter" width="24"></a>
-</div>
-    </footer>
+  </div>
+</footer>
 
     <script>
     const text = [
@@ -349,7 +352,7 @@ section.fade-in {
     });
   </script>
 
-  <!-- Section Fade-in Script -->
+  
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const sections = document.querySelectorAll("section");
